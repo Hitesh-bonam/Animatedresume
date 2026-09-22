@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Bonam Hitesh Phaneendra | DevOps Engineer & .NET Developer</title>
+    <title>Bonam Hitesh Phaneendra | Business Analyst</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Resume of Bonam Hitesh Phaneendra, a DevOps Engineer & .NET Developer specializing in AWS, CI/CD pipelines, Terraform, Docker, cloud security, and .NET application development." />
-    <meta property="og:title" content="Bonam Hitesh Phaneendra | DevOps Engineer & .NET Developer" />
-    <meta property="og:description" content="DevOps Engineer & .NET Developer experienced in AWS, CI/CD, Terraform, Docker, cloud security, and .NET development across Dev, QA, UAT, and Production environments." />
+    <meta name="description" content="Resume of Bonam Hitesh Phaneendra, a Business Analyst specializing in requirements elicitation, SQL-based data analysis, process mapping, prototyping, and UAT coordination." />
+    <meta property="og:title" content="Bonam Hitesh Phaneendra | Business Analyst" />
+    <meta property="og:description" content="Business Analyst with experience translating stakeholder needs into documented requirements, validated data, and delivered features across analytics, legal-tech, and SaaS products." />
     <meta property="og:type" content="profile" />
     <meta name="theme-color" id="themeColorMeta" content="#6366f1" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%236366f1'/%3E%3Ctext x='50' y='68' font-size='44' font-family='Arial,sans-serif' font-weight='900' fill='white' text-anchor='middle'%3EBH%3C/text%3E%3C/svg%3E"
@@ -865,97 +865,67 @@
             color: white;
             transform: scale(1.05);
         }
-        /* Premium skills grid */
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
+
+        .job-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
         }
-        
-        .skill-card {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.03), rgba(139, 92, 246, 0.03));
-            padding: 24px;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative;
-            overflow: hidden;
+
+        .job-meta .job-date {
+            margin-bottom: 0;
         }
-        
-        .skill-card::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.08), transparent);
-            transition: left 0.6s ease;
+
+        .job-location {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
         }
-        
-        .skill-card:hover::after {
-            left: 100%;
+        /* Core competency groups */
+
+        .competency-group {
+            margin-bottom: 28px;
         }
-        
-        .skill-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 48px var(--glow);
-            border-color: var(--primary-light);
+
+        .competency-group:last-child {
+            margin-bottom: 0;
         }
-        
-        .skill-name {
-            font-size: 15px;
+
+        .competency-label {
+            font-size: 13px;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 14px;
+        }
+
+        .competency-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .competency-tag {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .competency-tag:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-light);
             color: var(--text-main);
-            margin-bottom: 12px;
-            letter-spacing: -0.3px;
-        }
-        
-        .skill-bar {
-            width: 100%;
-            height: 8px;
-            background: var(--border);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .skill-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 10px;
-            width: 0%;
-            transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 0 15px var(--glow);
-            position: relative;
-        }
-        
-        .skill-fill::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 40px;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5));
-            animation: shimmer 2s ease-in-out infinite;
-        }
-        
-        @keyframes shimmer {
-            0%,
-            100% {
-                transform: translateX(0);
-                opacity: 0;
-            }
-            50% {
-                transform: translateX(-20px);
-                opacity: 1;
-            }
-        }
-        
-        .skill-card.animated .skill-fill {
-            width: var(--skill-percent);
+            box-shadow: 0 8px 20px var(--glow);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
         }
         /* Education timeline */
         
@@ -993,47 +963,6 @@
         .timeline-list li:hover::before {
             box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.3), 0 0 30px var(--glow);
             transform: translateY(-50%) scale(1.3);
-        }
-        /* Premium certificates */
-        
-        .cert-list li {
-            padding: 22px 32px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            font-weight: 600;
-            box-shadow: 0 8px 32px rgba(99, 102, 241, 0.4);
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        
-        .cert-list li::before {
-            content: "✓";
-            margin-right: 12px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        
-        .cert-list li::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-            transition: left 0.7s ease;
-        }
-        
-        .cert-list li:hover::after {
-            left: 100%;
-        }
-        
-        .cert-list li:hover {
-            transform: translateX(12px) scale(1.02);
-            box-shadow: 0 12px 48px rgba(139, 92, 246, 0.6);
         }
         /* Premium footer */
         
@@ -1149,9 +1078,6 @@
             section h3 {
                 font-size: 24px;
             }
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
             .back-to-top {
                 bottom: 20px;
                 right: 20px;
@@ -1203,15 +1129,11 @@
             }
             .content-card:hover,
             .job:hover,
-            .skill-card:hover,
+            .competency-tag:hover,
             .stat-box:hover,
-            .timeline-list li:hover,
-            .cert-list li:hover {
+            .timeline-list li:hover {
                 transform: none !important;
                 box-shadow: none !important;
-            }
-            .skill-fill {
-                width: var(--skill-percent) !important;
             }
         }
     </style>
@@ -1254,7 +1176,7 @@
         <a href="#skills" class="nav-link" data-section="skills">Skills</a>
         <a href="#experience" class="nav-link" data-section="experience">Experience</a>
         <a href="#education" class="nav-link" data-section="education">Education</a>
-        <a href="#certificates" class="nav-link" data-section="certificates">Certs</a>
+        <a href="#achievements" class="nav-link" data-section="achievements">Awards</a>
     </nav>
 
     <!-- Premium action bar -->
@@ -1281,17 +1203,17 @@
             <div class="header-content">
                 <div class="profile-avatar">👨‍💻</div>
                 <h1>BONAM HITESH PHANEENDRA</h1>
-                <h2>DevOps Engineer & .NET Developer</h2>
+                <h2>Business Analyst</h2>
                 <div class="status-badge">
                     <span class="status-dot"></span> Open to Work
                 </div>
                 <div class="contact-pills">
                     <div class="pill"><a href="tel:+919912446611">+91 9912446611</a></div>
                     <div class="pill"><a href="mailto:hitesh.bonam@gmail.com">hitesh.bonam@gmail.com</a></div>
-                    <div class="pill">Vellore, Tamil Nadu, IN</div>
+                    <div class="pill">Hyderabad, Telangana, IN</div>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/hitesh-bonam-07429b217/" class="social-btn" aria-label="LinkedIn profile" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/hitesh-bonam" class="social-btn" aria-label="LinkedIn profile" title="LinkedIn" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
                     </a>
                     <a href="https://github.com/Hitesh-bonam" class="social-btn" aria-label="GitHub profile" title="GitHub" target="_blank" rel="noopener noreferrer">
@@ -1307,7 +1229,7 @@
         <!-- Premium stats -->
         <div class="stats-grid">
             <div class="stat-box">
-                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-number" data-target="2">0</div>
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat-box">
@@ -1319,7 +1241,7 @@
                 <div class="stat-label">Technologies</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-number" data-target="1">0</div>
                 <div class="stat-label">Certifications</div>
             </div>
         </div>
@@ -1329,77 +1251,85 @@
             <section>
                 <h3>Professional Summary</h3>
                 <p>
-                    DevOps Engineer & .NET Developer with hands-on experience working in cloud-based environments and, since May 2026, in application development as well. Experienced in managing AWS infrastructure across multiple environments, including Development, QA,
-                    UAT, and Production. Skilled in CI/CD pipelines, cloud security, IAM access management, Linux systems, containerization, and .NET development. Passionate about automating workflows, improving deployment reliability, and building scalable,
-                    cloud-native solutions.
+                    Business Analyst with 2 years of experience translating stakeholder needs into documented requirements, validated data, and delivered features across analytics, legal-tech, and SaaS products. Skilled in requirements elicitation, SQL-based data
+                    analysis, process mapping, prototyping, and UAT coordination, with hands-on technical grounding in AWS, databases, and release workflows that enables effective partnership with engineering teams.
                 </p>
             </section>
         </div>
 
-        <!-- Core Skills with progress bars -->
+        <!-- Core Competencies -->
         <div class="content-card" id="skills">
             <section>
-                <h3>Core Skills</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-name">AWS & Cloud Platforms</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 90%"></div>
-                        </div>
+                <h3>Core Competencies</h3>
+                <div class="competency-group">
+                    <div class="competency-label">Business Analysis</div>
+                    <div class="competency-tags">
+                        <span class="competency-tag">Requirements Gathering & Elicitation</span>
+                        <span class="competency-tag">Functional Documentation</span>
+                        <span class="competency-tag">User Flows</span>
+                        <span class="competency-tag">Acceptance Criteria</span>
+                        <span class="competency-tag">Gap Analysis</span>
+                        <span class="competency-tag">Process Mapping</span>
+                        <span class="competency-tag">Feasibility Assessment</span>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-name">CI/CD Pipelines & Automation</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 85%"></div>
-                        </div>
+                </div>
+                <div class="competency-group">
+                    <div class="competency-label">Stakeholder Management</div>
+                    <div class="competency-tags">
+                        <span class="competency-tag">Cross-Functional Collaboration</span>
+                        <span class="competency-tag">Client-Facing Communication</span>
+                        <span class="competency-tag">Requirement Workshops</span>
+                        <span class="competency-tag">Iterative Review Cycles</span>
+                        <span class="competency-tag">Developer & QA Liaison</span>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Docker & Containerization</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 80%"></div>
-                        </div>
+                </div>
+                <div class="competency-group">
+                    <div class="competency-label">Data & Reporting</div>
+                    <div class="competency-tags">
+                        <span class="competency-tag">SQL Analysis & Query Development</span>
+                        <span class="competency-tag">Data Validation</span>
+                        <span class="competency-tag">Data Migration Support</span>
+                        <span class="competency-tag">Data Integrity Verification</span>
+                        <span class="competency-tag">Reporting Workloads</span>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Terraform (IaC)</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 85%"></div>
-                        </div>
+                </div>
+                <div class="competency-group">
+                    <div class="competency-label">Testing & Release</div>
+                    <div class="competency-tags">
+                        <span class="competency-tag">UAT Environment Ownership</span>
+                        <span class="competency-tag">UAT Coordination</span>
+                        <span class="competency-tag">Release Readiness Verification</span>
+                        <span class="competency-tag">Defect Triage</span>
+                        <span class="competency-tag">Test Automation Collaboration</span>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Python & Bash Scripting</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 75%"></div>
-                        </div>
+                </div>
+                <div class="competency-group">
+                    <div class="competency-label">Tools</div>
+                    <div class="competency-tags">
+                        <span class="competency-tag">Figma (Wireframes & Prototypes)</span>
+                        <span class="competency-tag">Git</span>
+                        <span class="competency-tag">GitHub</span>
+                        <span class="competency-tag">MS Office Suite</span>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Linux & Windows Administration</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 88%"></div>
-                        </div>
+                </div>
+                <div class="competency-group">
+                    <div class="competency-label">Technical</div>
+                    <div class="competency-tags">
+                        <span class="competency-tag">SQL</span>
+                        <span class="competency-tag">PostgreSQL</span>
+                        <span class="competency-tag">MySQL</span>
+                        <span class="competency-tag">AWS (EC2, S3, IAM, RDS, CloudWatch)</span>
+                        <span class="competency-tag">Terraform</span>
+                        <span class="competency-tag">Docker</span>
+                        <span class="competency-tag">Bash</span>
+                        <span class="competency-tag">.NET</span>
+                        <span class="competency-tag">Linux</span>
                     </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Nginx & Reverse Proxy</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 78%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">PostgreSQL & MySQL</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 70%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">MLOps & Monitoring</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 72%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">.NET / C#</div>
-                        <div class="skill-bar">
-                            <div class="skill-fill" style="--skill-percent: 30%"></div>
-                        </div>
+                </div>
+                <div class="competency-group">
+                    <div class="competency-label">Certifications</div>
+                    <div class="competency-tags">
+                        <span class="competency-tag">Google Cloud Computing Foundations Program</span>
                     </div>
                 </div>
             </section>
@@ -1411,44 +1341,48 @@
                 <h3>Professional Experience</h3>
 
                 <div class="job">
-                    <h4>AquilaTest — DevOps Engineer & .NET Developer</h4>
-                    <div class="job-date">Aug 2025 – Present</div>
+                    <h4>AquilaTest — DevOps Engineer</h4>
+                    <div class="job-meta">
+                        <span class="job-date">Aug 2025 – Present</span>
+                        <span class="job-location">Hyderabad, India</span>
+                    </div>
                     <ul>
-                        <li>Progressed from DevOps Intern to full-time DevOps Engineer, contributing to production cloud and deployment workflows</li>
-                        <li>Took on an expanded dual role from May 2026, combining ongoing DevOps ownership with hands-on .NET development, and now contribute across both infrastructure and application code</li>
-                        <li>Managed end-to-end AWS infrastructure across Development, QA, UAT, and Production environments, ensuring reliability and security</li>
-                        <li>Designed, maintained, and optimized CI/CD pipelines to support automated application builds, testing, and deployments</li>
-                        <li>Implemented and maintained Infrastructure as Code (Terraform) for provisioning and managing cloud resources</li>
-                        <li>Supported MLOps workflows, including setting up ML application deployments, maintaining services on Linux and Windows EC2 instances</li>
-                        <li>Performed log monitoring and troubleshooting using system logs and application logs to ensure service stability</li>
-                        <li>Configured and maintained cron jobs for scheduled automation tasks, backups, and routine maintenance activities</li>
-                        <li>Managed cloud security practices, including IAM roles, policies, least-privilege access, and secure credential handling</li>
-                        <li>Worked closely with development and QA teams to ensure high availability, scalability, and secure cloud operations</li>
-                        <li>Assisted in deployment strategies, rollback procedures, and post-deployment validation</li>
+                        <li>Own the UAT environment for a codeless automation testing platform, coordinating business acceptance cycles across Dev, QA, UAT, and Production and confirming release readiness before each production deployment</li>
+                        <li>Drove release strategy with development and QA stakeholders, gathering testing requirements and embedding automation into the CI/CD pipeline to reduce manual regression effort each cycle</li>
+                        <li>Represented the product in client-facing settings, gathering prospect feedback and market requirements that informed platform priorities</li>
+                        <li>Translated platform requirements into infrastructure delivery across four AWS environments and 20+ EC2 instances, reducing deployment time by 30% and sustaining a bi-weekly release cadence</li>
+                        <li>Partnered with engineering to deliver .NET backend features, bridging business requirements and technical implementation from specification through release</li>
+                        <li>Instrumented CloudWatch monitoring and log analysis to surface performance issues early, giving stakeholders visibility into platform health</li>
                     </ul>
                 </div>
 
                 <div class="job">
-                    <h4>Axxela Research & Analytics Pvt Ltd — DevOps Engineer Intern</h4>
-                    <div class="job-date">Jan 2025 – Jul 2025</div>
+                    <h4>Axxela Research & Analytics Pvt Ltd — Business Analyst</h4>
+                    <div class="job-meta">
+                        <span class="job-date">Jan 2025 – Jul 2025</span>
+                        <span class="job-location">Bangalore, India</span>
+                    </div>
                     <ul>
-                        <li>Supported DevOps workflows and cloud operations, contributing to infrastructure stability and deployment readiness</li>
-                        <li>Supported application deployments and environment setup activities for development and testing teams</li>
-                        <li>Helped monitor application and system health, reviewing logs and supporting issue analysis</li>
-                        <li>Assisted in database-related tasks, including basic SQL queries, data validation, and environment connectivity checks</li>
-                        <li>Gained exposure to cloud security and access management, including IAM concepts and environment-level permissions</li>
+                        <li>Analyzed production datasets using SQL and PostgreSQL to validate accuracy, surface inconsistencies, and ensure data integrity across reporting and analytics workloads</li>
+                        <li>Gathered requirements from cross-functional stakeholders for dataset migrations, documented scope and dependencies, and coordinated cutovers into production with minimal business disruption</li>
+                        <li>Developed and optimized SQL queries for validation and reporting, improving response times on large datasets and shortening turnaround on business data requests</li>
+                        <li>Verified release readiness across development and staging environments, standardizing deployment checks into a consistent, repeatable process</li>
+                        <li>Monitored application health and analyzed system logs to detect, triage, and escalate issues before they affected business users</li>
+                        <li>Coordinated environment access and permission requirements across teams, documenting access control needs in a multi-environment setup</li>
                     </ul>
                 </div>
 
                 <div class="job">
-                    <h4>Coforge Limited — UI/UX Designer</h4>
-                    <div class="job-date">Aug 2023 – Oct 2023</div>
+                    <h4>Coforge Limited — Business Analyst</h4>
+                    <div class="job-meta">
+                        <span class="job-date">Aug 2023 – Oct 2023</span>
+                        <span class="job-location">Hyderabad, India</span>
+                    </div>
                     <ul>
-                        <li>Worked as a UI/UX Designer on a lawyer-focused mobile application project</li>
-                        <li>Designed the complete application UI using Figma, starting from requirement understanding to final design delivery</li>
-                        <li>Created wireframes, user flows, and high-fidelity mockups to ensure a user-friendly and professional interface</li>
-                        <li>Collaborated with stakeholders to iterate on designs based on feedback and usability considerations</li>
-                        <li>Delivered end-to-end design assets, including finalized screens and design components</li>
+                        <li>Elicited business requirements from stakeholders and legal domain experts for the "Jurident – Law Connect" platform, translating them into documented user flows and functional specifications</li>
+                        <li>Converted requirements into wireframes and high-fidelity interactive prototypes in Figma, enabling stakeholders to validate scope and behavior before development began</li>
+                        <li>Facilitated iterative review cycles with stakeholders, designers, and developers, capturing feedback and refining requirements across successive revisions</li>
+                        <li>Delivered finalized specifications and design assets to the development team, ensuring requirements were understood and traceable through implementation</li>
                     </ul>
                 </div>
             </section>
@@ -1459,21 +1393,32 @@
             <section>
                 <h3>Education</h3>
                 <ul class="timeline-list">
-                    <li>Vellore Institute of Technology — B.Tech CSE | CGPA: 8.6</li>
-                    <li>Impulse Educational Institutions — Class XII | CGPA: 9.0</li>
-                    <li>Narayana E-Techno School — Class X | CGPA: 9.5</li>
+                    <li>
+                        <strong>Vellore Institute of Technology</strong> — Bachelor of Technology in Computer Science and Engineering, CGPA: 8.7/10<br>
+                        <span class="job-location">Vellore, Tamil Nadu · May 2025</span>
+                    </li>
+                    <li>
+                        <strong>Impulse Educational Institutions</strong> — Board of Intermediate Education (TSBIE), CGPA: 9.0/10<br>
+                        <span class="job-location">Hyderabad, India · May 2021</span>
+                    </li>
+                    <li>
+                        <strong>Narayana E-Techno School</strong> — Secondary School of Education (SSC), CGPA: 9.5/10<br>
+                        <span class="job-location">Hyderabad, India · May 2019</span>
+                    </li>
                 </ul>
             </section>
         </div>
 
-        <!-- Certificates -->
-        <div class="content-card" id="certificates">
+        <!-- Achievements -->
+        <div class="content-card" id="achievements">
             <section>
-                <h3>Certificates</h3>
-                <ul class="cert-list">
-                    <li>Google Cloud Computing Foundations Program</li>
-                    <li>7 Days Bootcamp – DevTown (HTML, CSS, JavaScript)</li>
-                </ul>
+                <h3>Achievements</h3>
+                <div class="job">
+                    <h4>GITEX Global 2025 — Dubai, UAE</h4>
+                    <ul>
+                        <li>Selected to represent AquilaTest at one of the world's largest technology exhibitions, demonstrating the platform to enterprise prospects and gathering market feedback from industry professionals</li>
+                    </ul>
+                </div>
             </section>
         </div>
 
@@ -1547,14 +1492,7 @@
             }, 16);
         }
 
-        // Animate skills
-        function animateSkills() {
-            document.querySelectorAll('.skill-card').forEach(card => {
-                card.classList.add('animated');
-            });
-        }
-
-        // Intersection Observer for stat counters + skill bars
+        // Intersection Observer for stat counters
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1562,10 +1500,6 @@
                         entry.target.querySelectorAll('.stat-number').forEach(counter => {
                             if (counter.textContent === '0') animateCounter(counter);
                         });
-                    }
-                    if (entry.target.querySelector('.skills-grid')) {
-                        const skills = entry.target.querySelectorAll('.skill-card');
-                        if (!skills[0].classList.contains('animated')) animateSkills();
                     }
                 }
             });

@@ -23,7 +23,6 @@
             --primary-dark: #4f46e5;
             --secondary: #ec4899;
             --accent: #8b5cf6;
-            --success: #22c55e;
             --text-main: #0f172a;
             --text-secondary: #334155;
             --text-muted: #64748b;
@@ -481,42 +480,6 @@
             from {
                 opacity: 0;
                 transform: translateY(30px);
-            }
-        }
-        
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 18px;
-            background: rgba(34, 197, 94, 0.15);
-            border: 1px solid rgba(34, 197, 94, 0.5);
-            border-radius: 50px;
-            color: white;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 24px;
-            animation: fadeInUp 0.8s ease 0.7s backwards;
-        }
-        
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--success);
-            animation: statusPulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes statusPulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
-            }
-            70% {
-                box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
             }
         }
         
@@ -1163,7 +1126,7 @@
         <a href="#skills" class="nav-link" data-section="skills">Skills</a>
         <a href="#experience" class="nav-link" data-section="experience">Experience</a>
         <a href="#education" class="nav-link" data-section="education">Education</a>
-        <a href="#achievements" class="nav-link" data-section="achievements">Awards</a>
+        <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
     </nav>
 
     <!-- Premium action bar -->
@@ -1190,13 +1153,10 @@
             <div class="header-content">
                 <div class="profile-avatar">👨‍💻</div>
                 <h1>BONAM HITESH PHANEENDRA</h1>
-                <div class="status-badge">
-                    <span class="status-dot"></span> Open to Work
-                </div>
                 <div class="contact-pills">
                     <div class="pill"><a href="tel:+919912446611">+91 9912446611</a></div>
                     <div class="pill"><a href="mailto:hitesh.bonam@gmail.com">hitesh.bonam@gmail.com</a></div>
-                    <div class="pill">Hyderabad, Telangana, IN</div>
+                    <div class="pill">Hyderabad, Telangana 500090</div>
                 </div>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/hitesh-bonam" class="social-btn" aria-label="LinkedIn profile" title="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -1215,27 +1175,27 @@
         <!-- Premium stats -->
         <div class="stats-grid">
             <div class="stat-box">
-                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-number" data-target="2">2</div>
                 <div class="stat-label">Years Experience</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number" data-target="15">0</div>
-                <div class="stat-label">Projects Completed</div>
+                <div class="stat-number" data-target="4">4</div>
+                <div class="stat-label">AWS Environments</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number" data-target="10">0</div>
-                <div class="stat-label">Technologies</div>
+                <div class="stat-number" data-target="20" data-suffix="+">20+</div>
+                <div class="stat-label">EC2 Instances</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number" data-target="1">0</div>
-                <div class="stat-label">Certifications</div>
+                <div class="stat-number" data-target="30" data-suffix="%">30%</div>
+                <div class="stat-label">Faster Deployments</div>
             </div>
         </div>
 
-        <!-- Professional Summary -->
+        <!-- Summary -->
         <div class="content-card" id="summary">
             <section>
-                <h3>Professional Summary</h3>
+                <h3>Summary</h3>
                 <p>
                     Technology professional with 2 years of experience spanning business analysis, DevOps, and .NET development across analytics, legal-tech, and SaaS products. Experienced in gathering requirements, analyzing data with SQL, and coordinating
                     with QA teams, as well as managing AWS infrastructure, building CI/CD pipelines, and developing ASP.NET Core Web APIs. Effective at bridging business needs and technical delivery.
@@ -1335,7 +1295,7 @@
                         <span class="job-location">Hyderabad, India</span>
                     </div>
                     <ul>
-                        <li>Elicited requirements from stakeholders and legal domain experts for the "Jurident – Law Connect" platform, translating them into user flows and functional specifications</li>
+                        <li>Elicited requirements from stakeholders and legal domain experts for the “Jurident – Law Connect” platform, translating them into user flows and functional specifications</li>
                         <li>Created wireframes and interactive prototypes in Figma, enabling stakeholders to validate scope before development</li>
                         <li>Facilitated review cycles with stakeholders, designers, and developers to finalize specifications</li>
                     </ul>
@@ -1434,19 +1394,23 @@
         }
 
         // Animate counters
+        // Final values live in the HTML (for print, crawlers, no-JS); this only replays the count-up.
         function animateCounter(element) {
-            const target = parseInt(element.getAttribute('data-target'));
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            const target = parseInt(element.dataset.target, 10);
+            const suffix = element.dataset.suffix || '';
             const duration = 2000;
             const step = target / (duration / 16);
             let current = 0;
+            element.textContent = '0' + suffix;
 
             const timer = setInterval(() => {
                 current += step;
                 if (current >= target) {
-                    element.textContent = target + '+';
+                    element.textContent = target + suffix;
                     clearInterval(timer);
                 } else {
-                    element.textContent = Math.floor(current);
+                    element.textContent = Math.floor(current) + suffix;
                 }
             }, 16);
         }
@@ -1457,7 +1421,10 @@
                 if (entry.isIntersecting) {
                     if (entry.target.classList.contains('stats-grid')) {
                         entry.target.querySelectorAll('.stat-number').forEach(counter => {
-                            if (counter.textContent === '0') animateCounter(counter);
+                            if (!counter.dataset.animated) {
+                                counter.dataset.animated = 'true';
+                                animateCounter(counter);
+                            }
                         });
                     }
                 }
